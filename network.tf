@@ -20,5 +20,6 @@ resource "azurerm_network_security_rule" "Rule1" {
     destination_address_prefix = "*"
     resource_group_name = "myGroup"
     network_security_group_name  = "nsg1"
-    
+
+    depends_on = [ azurerm_resource_group.myRG ]
 }
