@@ -16,8 +16,7 @@ resource "azurerm_windows_virtual_machine" "SQLVM" {
   admin_username      = "sqladmin"
   admin_password      = "Wipro@123456789"
   network_interface_ids = [
-    azurerm_network_interface.VMNIC.id,
-  ]
+    azurerm_network_interface.VMNIC.id,]
 
   os_disk {
     caching              = "ReadWrite"
