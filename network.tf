@@ -27,7 +27,7 @@ resource "azurerm_virtual_network" "myvnet" {
   address_space       = ["10.5.0.0/16"]
   location            = local.location
   resource_group_name = local.ResourceGroup
-  depends_on = [ local.ResourceGroup]
+  depends_on = [azurerm_resource_group.myRG]
 }
 
 resource "azurerm_subnet" "Prod" {
@@ -35,6 +35,7 @@ resource "azurerm_subnet" "Prod" {
   resource_group_name  = local.ResourceGroup  
   virtual_network_name = "myvnet"
   address_prefixes     = ["10.5.2.0/24"]
+  depends_on = [ azurerm_virtual_network.myvnet ]
 }
 
 resource "azurerm_network_interface" "VMNIC" {
@@ -47,4 +48,6 @@ resource "azurerm_network_interface" "VMNIC" {
     subnet_id                     = azurerm_subnet.Prod.id
     private_ip_address_allocation = "Dynamic"
   }
+
+  depends_on = [ azurerm_subnet.Prod ]
 }
