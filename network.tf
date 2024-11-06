@@ -22,6 +22,7 @@ resource "azurerm_network_security_rule" "Rule1" {
     network_security_group_name  = "nsg1" 
 }
 
+
 resource "azurerm_virtual_network" "myvnet" {
   name                = "myvnet"
   address_space       = ["10.5.0.0/16"]

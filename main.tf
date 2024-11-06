@@ -32,3 +32,4 @@ resource "azurerm_windows_virtual_machine" "SQLVM" {
     version   = "latest"
   }
 }
+
