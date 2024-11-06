@@ -22,3 +22,4 @@ resource "azurerm_network_security_rule" "Rule1" {
     network_security_group_name  = "nsg1"
     depends_on = [ azurerm_resource_group.myRG ]
 }
+
