@@ -57,4 +57,3 @@ resource "azurerm_mssql_database" "testsqldb" {
   depends_on = [ azurerm_mssql_server.sqlsrv20241107 ]
   }
 
-
