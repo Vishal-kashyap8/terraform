@@ -35,7 +35,7 @@ resource "azurerm_windows_virtual_machine" "SQLVM" {
 */
 ## Databse
 resource "azurerm_mssql_server" "sqlsrv20241107" {
-  name                         = "sqlsrv20241107"
+  name                         = "sqlsrv20241108"
   resource_group_name          = local.ResourceGroup
   location                     = local.location
   version                      = "12.0"
