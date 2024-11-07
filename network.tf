@@ -1,4 +1,4 @@
-/*Network Security group creation*/
+/*Network Security group creation
 
 resource "azurerm_network_security_group" "NSG1" {
     name = "nsg1"
@@ -7,7 +7,7 @@ resource "azurerm_network_security_group" "NSG1" {
     depends_on = [ azurerm_resource_group.myRG ]
 }
 
-/*Network Security group Rule defination*/
+/*Network Security group Rule defination
 resource "azurerm_network_security_rule" "Rule1" {
     name = "rule1"
     priority = 100
@@ -53,3 +53,5 @@ resource "azurerm_network_interface" "VMNIC" {
 
   depends_on = [ azurerm_subnet.Prod ]
 }
+
+*/
